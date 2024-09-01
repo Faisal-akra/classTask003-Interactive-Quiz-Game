@@ -1,0 +1,38 @@
+#a{
+    width: 5vh;
+    height: 2vh;
+    background-color: yellow;
+
+    
+}
+
+#a:focus{
+    background-color: orange;
+}
+
+#b{
+    width: 5vh;
+    height: 2vh;
+    background-color: lightblue;
+    
+}
+
+
+
+#c{
+    width: 5vh;
+    height: 2vh;
+    background-color: lightsalmon;
+    
+}
+
+
+
+
+#d{
+    width: 5vh;
+    height: 2vh;
+    background-color: lightcoral;
+    
+}
+
