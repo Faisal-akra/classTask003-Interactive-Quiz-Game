@@ -4,6 +4,46 @@
 }
 
 
-.btn{
-    width: 300px;
+.Quiz-Game{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightblue;
+    height: 500px;
+    width: 500px;
 }
+
+.Quiz-Game h1{
+    text-align: center;
+}
+.questionsArea {
+    text-align: center;
+}
+
+
+.options{
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.options button{
+    padding: 1vh;
+    background-color: gray;
+    margin: 2px;
+    color: white;
+}
+.next{
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+.next button{
+    width: 10vh;
+    height: 3vh;
+    background-color: blue;
+    color: white;
+}
+
