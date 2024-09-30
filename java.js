@@ -122,6 +122,8 @@ function checkedOption() {
       
     }
 
+    dissAbbled() // is ko idhar call is liye kiya ta k is k bad ye kam ho
+    questionIndex++; // agar isko incremenet nahi kiya to agla question nahi ayga;
 
 }
 
@@ -130,14 +132,30 @@ function checkedOption() {
 
 
 
-// dissAbbled()
 
 
-// //Jab user select karay to baqi sab option stuck hojay
-// function dissAbbled() {
-//   for (var i = 0; i < optionsArea.length; i++) {
-//     optionsArea[i].disabled = 'true';
-//   }
-// }
+//Jab user select karay to baqi sab option stuck hojay
+function dissAbbled() {
+  for (var i = 0; i < optionsArea.length; i++) {
+    optionsArea[i].disabled = true;
+  }
+}
+
+
+// Next Questions:
+
+var nextBtn = document.getElementById('next');
+
+nextBtn.addEventListener('click',  moveToNext);
+
+function moveToNext() {
+    for (var i = 0; i < optionsArea.length; i++) {
+        optionsArea[i].disabled = false;
+        optionsArea[i].style.backgroundColor = '';
+        optionsArea[i].style.color = '';
+    }
+initializeQuiz()
+
+}
 
 
