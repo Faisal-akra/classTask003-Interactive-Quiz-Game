@@ -81,48 +81,63 @@ function initializeQuiz() {
 
 initializeQuiz();
 
-// var marks = 0;
 
 
-// //Ab ham jo option correct hoga uspe color lagana chahtay hay
-// for (var i = 0; i < optionsArea.length; i++) {
-//     optionsArea[i].addEventListener('click', checkedOption);
-// }
-
-// var obj = this; // is ko hum nay idhar declare kiya
-
-// function checkedOption() {
-//     var correctAnswer = questionsObject[questionIndex].correct;
-//     var selectedAnswer = this.textContent; // user jis option pe click karayga osko ham nay pakra
+var marks = 0;
 
 
+//Ab ham jo option correct hoga uspe color lagana chahtay hay
+for (var i = 0; i < optionsArea.length; i++) {
+    optionsArea[i].addEventListener('click', checkedOption);
+}
 
-//     if (correctAnswer === selectedAnswer) {
-//         marks++;
+var obj = this; // is ko hum nay idhar declare kiya
 
-//         this.style.backgroundColor = "green";
-//         this.style.color = "white";
-//         this.textContent += '🎊'+'👏'
-//     }else{
-//         this.style.backgroundColor = "red";
-//         this.style.color = "white";
-//         this.textContent += '😢'
+function checkedOption() {
+    var correctAnswer = questionsObject[questionIndex].correct;
+    var selectedAnswer = this.textContent; // user jis option pe click karayga osko ham nay pakra
 
-//         //Agar user nay ghalat enter kiya to correct ka color bhi change kardo
 
-//         for (var i = 0; i < optionsArea.length; i++) {
 
-//             if (optionsArea[i].textContent === questionsObject[questionIndex].correct) {
-//                 optionsArea[i].style.backgroundColor = "green";
-//                 optionsArea[i].style.color = "white";
-//             }
-//         }
+    if (correctAnswer === selectedAnswer) {
+        marks++;
+
+        this.style.backgroundColor = "green";
+        this.style.color = "white";
+        this.textContent += '🎊'+'👏'
+    }else{
+        this.style.backgroundColor = "red";
+        this.style.color = "white";
+        this.textContent += '😢'
+
+        //Agar user nay ghalat enter kiya to correct ka color bhi change kardo
+
+        for (var i = 0; i < optionsArea.length; i++) {
+
+            if (optionsArea[i].textContent === questionsObject[questionIndex].correct) {
+                optionsArea[i].style.backgroundColor = "green";
+                optionsArea[i].style.color = "white";
+            }
+        }
       
-//     }
+    }
 
 
+}
+
+
+
+
+
+
+// dissAbbled()
+
+
+// //Jab user select karay to baqi sab option stuck hojay
+// function dissAbbled() {
+//   for (var i = 0; i < optionsArea.length; i++) {
+//     optionsArea[i].disabled = 'true';
+//   }
 // }
-
-
 
 
