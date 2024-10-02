@@ -105,10 +105,12 @@ function checkedOption() {
         this.style.backgroundColor = "green";
         this.style.color = "white";
         this.textContent += '🎊'+'👏'
+        correct.play(); //audio:
     }else{
         this.style.backgroundColor = "red";
         this.style.color = "white";
         this.textContent += '😢'
+        inCorrect.play() //audion:
 
         //Agar user nay ghalat enter kiya to correct ka color bhi change kardo
 
@@ -154,8 +156,15 @@ function moveToNext() {
         optionsArea[i].style.backgroundColor = '';
         optionsArea[i].style.color = '';
     }
+
 initializeQuiz()
 
 }
 
 
+//Audio Add:
+
+var correct = document.getElementById('correctSound');
+var inCorrect = document.getElementById('incorrect');
+
+console.log(correct);
