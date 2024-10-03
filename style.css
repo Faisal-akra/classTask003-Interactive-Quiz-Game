@@ -1,15 +1,25 @@
 *{
     padding: 0px;
     margin: 0px;
+    
 }
 
 
+body{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
 .Quiz-Game{
-    margin-left: auto;
-    margin-right: auto;
-    background-color: lightblue;
+    margin-top: 5vh;
+    background-color: white;
     height: 500px;
     width: 500px;
+    border: 1px ;
+    box-shadow: 2px 2px 2px 2px black ;
+    
+   
     
 }
 
@@ -30,9 +40,15 @@
 
 .options button{
     padding: 1vh;
-    background-color: gray;
+    background-color: white;
     margin: 2px;
-    color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+    
+    
+
 }
 .next{
     display: flex;
@@ -42,19 +58,20 @@
 }
 
 .next button{
-    width: 10vh;
-    height: 3vh;
-    background-color: blue;
+    width: 15vh;
+    height: 4vh;
+    box-shadow: 1px 1px 1px 1px orange ;
+    color: black;
+    padding: 1vh;
+    margin-top: 1vh;
+
+}
+
+.next button:hover{
+    background-color: crimson;
     color: white;
 }
 
-
-#restart{
-    width: 10vh;
-    height: 3vh;
-    background-color: blue;
-    color: white;  
-}
 
 
 /* result section */
@@ -62,7 +79,7 @@
 .result-section{
     width: 400px;
     background-color: white;
-    color: blue;
+    color: black;
     display: none;
     padding: 20px;
     border-radius: 10px;
@@ -72,16 +89,20 @@
     justify-content: center;
     align-items: center;
     margin-top: 20%;
+    border: 1px solid black;
    }
 
-.result-section button{
-   background-color: blue;
-   color: white;
-   padding: .5rem 3rem;
-   border: none;
-   margin: 0% auto;
-   font-size: large;
-   margin-top: 30px;
+   #restart{
+    width: 15vh;
+    height: 4vh;
+    box-shadow: 1px 1px 1px 1px orange ;
+    color: black;
+    padding: 1vh;
+    margin-top: 1vh; 
+}
 
 
+#restart:hover{
+    background-color: crimson;
+    color: white;
 }
