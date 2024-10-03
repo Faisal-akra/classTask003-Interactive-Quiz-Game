@@ -124,16 +124,10 @@ function checkedOption() {
       
     }
 
-    dissAbbled() // is ko idhar call is liye kiya ta k is k bad ye kam ho
+    dissAbbled(); // is ko idhar call is liye kiya ta k is k bad ye kam ho
     questionIndex++; // agar isko incremenet nahi kiya to agla question nahi ayga;
 
 }
-
-
-
-
-
-
 
 
 //Jab user select karay to baqi sab option stuck hojay
@@ -144,9 +138,10 @@ function dissAbbled() {
 }
 
 
-// Next Questions:
 
-var nextBtn = document.getElementById('next');
+
+
+var nextBtn = document.getElementById('Next');
 
 nextBtn.addEventListener('click',  moveToNext);
 
@@ -157,6 +152,31 @@ function moveToNext() {
         optionsArea[i].style.color = '';
     }
 
+    //Restart section
+    if(questionIndex < optionsArea.length) {
+        initializeQuiz();
+    }else{
+        alert('Quiz-Completed');
+        resultSection.style.display = 'block';
+        quizGame.style.display = 'none';
+        resultSectionTex.textContent = `Your Marks is ${marks} Out Of ${questionsObject.length}`
+    }
+}
+
+// Next Questions:
+var quizGame = document.querySelector(' .Quiz-Game')
+console.log(quizGame);
+var resultSection = document.querySelector(' .result-section');
+var resultSectionTex = document.querySelector(' .result-section h1')
+var restatButton = document.getElementById('restart');
+
+restatButton.addEventListener('click', restartQuiz);
+
+function restartQuiz() {
+    marks = 0;
+    questionIndex = 0;
+    resultSection.style.display = 'none';
+    quizGame.style.display = 'block'
 initializeQuiz()
 
 }
@@ -167,4 +187,4 @@ initializeQuiz()
 var correct = document.getElementById('correctSound');
 var inCorrect = document.getElementById('incorrect');
 
-console.log(correct);
+
